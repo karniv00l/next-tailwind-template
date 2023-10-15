@@ -41,6 +41,18 @@ This site is automatically deployed to [https://dynamlabs.com](https://dynamlabs
 
 This project builds **only static pages**, so it can be deployed to any static hosting and be cached by CDN like Cloudflare or Netlify.
 
+### Building
+
+```bash
+npm run build
+```
+
+After building, the `build` directory contains all static files that can be served by any static hosting. To test the production build run:
+
+```bash
+npm run serve
+```
+
 Rest of the dynamic content is handled by Serverless functions (see below).
 
 ## Serverless functions

@@ -10,5 +10,5 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": ["Dynam", "dynamlabs", "tailwindcss"]
+  "cSpell.words": ["Dynam", "dynamlabs", "Nanum", "tailwindcss", "Vanta"]
 }

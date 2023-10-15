@@ -4,15 +4,20 @@
   "private": true,
   "scripts": {
     "start": "next dev -p 3666",
-    "build": "next build",
-    "serve": "next start",
+    "build": "rm -rf build && next build",
+    "serve": "serve -s build -p 3666",
     "lint": "next lint",
     "lint:fix": "next lint --fix"
   },
   "dependencies": {
+    "@types/react-scroll": "^1.8.8",
+    "@types/three": "0.134.0",
     "next": "13.5.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-scroll": "^1.9.0",
+    "three": "0.134.0",
+    "vanta": "^0.5.24"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -28,6 +33,7 @@
     "postcss": "^8",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.6",
+    "serve": "^14.2.1",
     "tailwindcss": "^3",
     "typescript": "^5.2.2"
   }
