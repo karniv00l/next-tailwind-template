@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dynam Labs marketing page
 
-## Getting Started
+Source code for [https://dynamlabs.com](https://dynamlabs.com).
 
-First, run the development server:
+> **Warning**
+> Secrets are stored in [.env](/.env) file which is committed to the repository. Keep this repository private and do not expose the secrets to the public.
+
+## Tech stack
+
+- [Next.js](https://nextjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [TypeScript](https://www.typescriptlang.org)
+- [ESLint](https://eslint.org)
+- [Prettier](https://prettier.io)
+
+## Development
+
+Node.js 18+ is required.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# install dependencies
+npm ci
+
+# start development server
+npm start
+
+# lint code
+npm run lint
+
+# fix lint errors
+npm run lint:fix
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3666](http://localhost:3666) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Deployments
 
-## Learn More
+This site is automatically deployed to [https://dynamlabs.com](https://dynamlabs.com) on every push to `main` branch using Cloudflare Pages.
 
-To learn more about Next.js, take a look at the following resources:
+This project builds **only static pages**, so it can be deployed to any static hosting and be cached by CDN like Cloudflare or Netlify.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Rest of the dynamic content is handled by Serverless functions (see below).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Serverless functions
 
-## Deploy on Vercel
+TODO
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is using [Cloudflare Workers](https://workers.cloudflare.com/) to handle serverless functions.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [ ] contact form / sending emails
