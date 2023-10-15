@@ -15,7 +15,7 @@ Source code for [https://dynamlabs.com](https://dynamlabs.com).
 
 ## Development
 
-Node.js 18+ is required.
+Node.js (version [.nvmrc](/.nvmrc)) is required.
 
 ```bash
 # install dependencies
