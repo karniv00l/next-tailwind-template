@@ -3,7 +3,7 @@
 Source code for [https://dynamlabs.com](https://dynamlabs.com).
 
 > **Warning**
-> Secrets are stored in [.env](/.env) file which is committed to the repository. Keep this repository private and do not expose the secrets to the public.
+> Secrets are stored in [.env](./.env) file which is committed to the repository. Keep this repository private and do not expose the secrets to the public.
 
 ## Tech stack
 
@@ -15,7 +15,7 @@ Source code for [https://dynamlabs.com](https://dynamlabs.com).
 
 ## Development
 
-Node.js (version [.nvmrc](/.nvmrc)) is required.
+Node.js (see version in: [.nvmrc](./.nvmrc)) is required.
 
 ```bash
 # install dependencies
