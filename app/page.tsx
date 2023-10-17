@@ -2,18 +2,22 @@
 
 import { Element as ScrollElement } from 'react-scroll';
 import Nav, { navHeight } from './nav';
-import AnimatedHeader from './AnimatedHeader';
+import Hero from './hero';
+
+const sectionStyle = {
+  height: `calc(100vh - ${navHeight}px)`,
+  width: '100%',
+};
 
 export default function Home() {
   return (
     <>
       <Nav />
       <main className="flex flex-col items-center justify-between">
-        <ScrollElement style={{ height: `calc(100vh - ${navHeight}px)` }} name="home">
-          <AnimatedHeader />
+        <ScrollElement style={sectionStyle} name="home">
+          <Hero />
         </ScrollElement>
-
-        <ScrollElement style={{ height: `calc(100vh - ${navHeight}px)` }} name="products">
+        <ScrollElement style={sectionStyle} name="products">
           <div className="grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
             <a
               href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"

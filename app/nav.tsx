@@ -22,7 +22,7 @@ export default function Nav() {
   return (
     <nav
       style={{ height: navHeight }}
-      className="w-100 sticky left-0 top-0 z-10 bg-black bg-opacity-30 pl-5 pr-5 font-bold backdrop-blur-lg backdrop-filter"
+      className="w-100 sticky left-0 top-0 z-20 bg-black bg-opacity-30 pl-5 pr-5 font-bold backdrop-blur-lg backdrop-filter"
     >
       <ul className="m-0 flex items-center justify-end p-5">
         <li className="mr-auto list-none uppercase">
@@ -69,7 +69,20 @@ export default function Nav() {
             Products
           </ScrollLink>
         </li>
-        <li className="list-none uppercase">
+        <li className="mr-8 list-none uppercase">
+          <ScrollLink
+            activeStyle={activeStyle}
+            offset={-navHeight}
+            to="profile"
+            href="#profile"
+            spy
+            smooth
+            duration={scrollDuration}
+          >
+            Profile
+          </ScrollLink>
+        </li>
+        <li className="mr-8 list-none uppercase">
           <Link href={Routes.contact}>Contact</Link>
         </li>
       </ul>

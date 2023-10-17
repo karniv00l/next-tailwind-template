@@ -6,7 +6,7 @@
     "start": "next dev -p 3666",
     "build": "rm -rf build && next build",
     "serve": "serve -s build -p 3666",
-    "lint": "next lint",
+    "lint": "tsc && next lint",
     "lint:fix": "next lint --fix"
   },
   "dependencies": {
