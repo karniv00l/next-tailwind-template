@@ -1,13 +1,17 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Nanum_Gothic_Coding } from 'next/font/google';
+import { Inter, Nanum_Gothic_Coding } from 'next/font/google';
 
-// const inter = Inter({ subsets: ['latin'] });
-// const inter = Inter();
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'block',
+  variable: '--font-inter',
+});
 const gothicCoding = Nanum_Gothic_Coding({
   weight: ['400', '700'],
   subsets: ['latin'],
   display: 'block',
+  variable: '--font-gothic-coding',
 });
 
 export const metadata: Metadata = {
@@ -25,8 +29,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
       </head>
-      <body className={gothicCoding.className}>
-        <div className="ml-auto mr-auto max-w-7xl overflow-x-clip">{children}</div>
+      <body className={[inter, gothicCoding].map((font) => font.variable).join(' ')}>
+        <div className="ml-auto mr-auto max-w-7xl overflow-x-clip font-sans">{children}</div>
       </body>
     </html>
   );
