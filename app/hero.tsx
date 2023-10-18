@@ -1,15 +1,16 @@
-import AnimatedHeader from './AnimatedHeader';
+import Vanta, { Effects } from './Vanta';
 
 export default function Hero() {
   return (
     <div className="relative h-full">
       <div className="absolute z-10 h-full w-full">
         <div className="flex h-full items-center justify-center">
-          <div className="max-w-2xl text-center">
+          <div className="max-w-3xl px-5 text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-200 sm:text-6xl">Your EV, Your Way</h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              We focus on your needs. Our in-house designed VCUs offer flexibility like no other. No frills, just pure
-              performance tailored to you.
+              We focus on your needs. Our in-house designed VCUs offer flexibility like no other.
+              <br />
+              No frills, just pure performance tailored to you.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
@@ -26,7 +27,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="absolute z-0 h-full w-full">
-        <AnimatedHeader />
+        <Vanta effectType={Effects.NET} />
       </div>
     </div>
   );
