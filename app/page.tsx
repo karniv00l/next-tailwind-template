@@ -5,6 +5,7 @@ import Nav, { navHeight } from './nav';
 import Hero from './index/hero';
 import Products from './index/products';
 import { ScrollElements } from './routes';
+import Company from './index/company';
 
 const sectionStyle = {
   height: `calc(100vh - ${navHeight}px)`,
@@ -23,7 +24,7 @@ export default function Home() {
           <Products />
         </ScrollElement>
         <ScrollElement style={sectionStyle} name={ScrollElements.company}>
-          <Products />
+          <Company />
         </ScrollElement>
       </main>
     </>

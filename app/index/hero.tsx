@@ -39,7 +39,9 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="absolute z-0 h-full w-full">{/* <Vanta effectType={Effects.NET} /> */}</div>
+      <div className="absolute z-0 h-full w-full">
+        <Vanta effectType={Effects.NET} />
+      </div>
     </div>
   );
 }
