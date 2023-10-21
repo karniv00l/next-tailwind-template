@@ -37,7 +37,7 @@ export default function Nav() {
             <Image
               className="md:hidden"
               src={logoMobile as string}
-              alt="Dynam Labs Logo"
+              alt="Dynam Labs Logo Bolt"
               height={logoHeight}
               priority
             />
