@@ -1,10 +1,10 @@
 'use client';
 
-import { useEffect } from 'react';
+import { FC, ReactNode, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Link as ScrollLink, scrollSpy } from 'react-scroll';
-import { Routes } from './routes';
+import { Routes, ScrollElements } from './routes';
 import logoDesktop from './assets/images/dynam-logo-2.svg';
 import logoMobile from './assets/images/bolt.svg';
 
@@ -13,6 +13,32 @@ export const navHeight = 64;
 const logoHeight = 24;
 const scrollDuration = 500;
 const activeStyle = { textDecoration: 'underline' };
+
+export const NavScrollLink: FC<{ to: ScrollElements; className?: string; children: ReactNode }> = ({
+  to,
+  className,
+  children,
+}) => (
+  <ScrollLink
+    activeStyle={activeStyle}
+    offset={-navHeight}
+    to={to}
+    href={`#${to}`}
+    spy
+    hashSpy
+    smooth
+    duration={scrollDuration}
+    className={className}
+  >
+    {children}
+  </ScrollLink>
+);
+
+const NavScrollLiLink: FC<{ name: string; to: ScrollElements }> = ({ name, to }) => (
+  <li className="mr-8 list-none uppercase">
+    <NavScrollLink to={to}>{name}</NavScrollLink>
+  </li>
+);
 
 export default function Nav() {
   useEffect(() => {
@@ -43,45 +69,10 @@ export default function Nav() {
             />
           </Link>
         </li>
-        <li className="mr-8 list-none uppercase">
-          <ScrollLink
-            activeStyle={activeStyle}
-            offset={-navHeight}
-            to="home"
-            href="#home"
-            spy
-            smooth
-            duration={scrollDuration}
-          >
-            Home
-          </ScrollLink>
-        </li>
-        <li className="mr-8 list-none uppercase">
-          <ScrollLink
-            activeStyle={activeStyle}
-            offset={-navHeight}
-            to="products"
-            href="#products"
-            spy
-            smooth
-            duration={scrollDuration}
-          >
-            Products
-          </ScrollLink>
-        </li>
-        <li className="mr-8 list-none uppercase">
-          <ScrollLink
-            activeStyle={activeStyle}
-            offset={-navHeight}
-            to="profile"
-            href="#profile"
-            spy
-            smooth
-            duration={scrollDuration}
-          >
-            Profile
-          </ScrollLink>
-        </li>
+        <NavScrollLiLink name="Home" to={ScrollElements.home} />
+        <NavScrollLiLink name="Products" to={ScrollElements.products} />
+        <NavScrollLiLink name="Company" to={ScrollElements.company} />
+
         <li className="mr-8 list-none uppercase">
           <Link href={Routes.contact}>Contact</Link>
         </li>
