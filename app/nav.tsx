@@ -34,7 +34,7 @@ export const NavScrollLink: FC<{ to: ScrollElements; className?: string; childre
 );
 
 const NavScrollLiLink: FC<{ name: string; to: ScrollElements; last?: boolean }> = ({ name, to, last }) => (
-  <li className={`list-none uppercase ${last ? 'mr-0' : 'mr-5'}`}>
+  <li className={`list-none uppercase ${last ? 'mr-0' : 'mr-4 sm:mr-5'}`}>
     <NavScrollLink
       to={to}
       className="py-1 transition-all hover:border-b-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-brand-600"
@@ -65,7 +65,7 @@ export default function Nav() {
               priority
             />
             <Image
-              className="max-[360px]:hidden md:hidden"
+              className="max-[350px]:hidden md:hidden"
               src={logoMobile as string}
               alt="Dynam Labs Logo Bolt"
               height={logoHeight}
