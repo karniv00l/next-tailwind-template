@@ -41,7 +41,7 @@ const vcuFeatures: Feature[] = [
   {
     name: 'Internal Logging',
     description:
-      'Store extensive data with 128GB internal logging capacity, allowing in-depth analysis and performance optimization.',
+      'Store extensive data with 128GB internal logging capacity, allowing in-depth analysis and performance optimization',
     icon: IconDeviceSdCard as ElementType,
   },
   {

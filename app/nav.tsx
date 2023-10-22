@@ -37,7 +37,7 @@ const NavScrollLiLink: FC<{ name: string; to: ScrollElements; last?: boolean }> 
   <li className={`list-none uppercase ${last ? 'mr-0' : 'mr-4 sm:mr-5'}`}>
     <NavScrollLink
       to={to}
-      className="py-1 transition-all hover:border-b-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-brand-600"
+      className="py-1 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-brand-600"
     >
       {name}
     </NavScrollLink>
