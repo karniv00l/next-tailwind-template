@@ -197,7 +197,7 @@ export default function Products() {
 
       {/* full specs */}
       <div className="mx-auto max-w-3xl px-8 py-10 text-center lg:max-w-4xl lg:px-6">
-        <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl">Full specs</h2>
+        <h2 className="mt-2 text-2xl font-bold tracking-tight text-gray-100 sm:text-3xl">Full specs</h2>
         <p className="mt-6">
           <div className="mt-10 flex items-center gap-x-4">
             <h4 className="flex-none text-sm font-semibold leading-6 text-gray-300">What’s included</h4>
