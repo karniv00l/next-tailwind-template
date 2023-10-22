@@ -192,25 +192,22 @@ export default function Products() {
 
       {/* full specs */}
       <div className="mx-auto max-w-3xl px-6 py-10 text-center sm:px-8 lg:max-w-4xl">
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-gray-100 sm:text-3xl">Full specs</h2>
-        <div className="mt-6">
-          <div className="mt-10 flex items-center gap-x-4">
-            <span className="flex-none text-sm font-semibold leading-6 text-gray-300">What&apos;s included</span>
-            <div className="h-px flex-auto bg-gray-600" />
-          </div>
-          <ul
-            role="list"
-            className="mt-10 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:gap-6 md:grid-cols-2"
-          >
-            {vcuSpecs.map((spec) => (
-              <li key={spec.description} className="flex gap-x-3 text-gray-200">
-                <IconCheck className="h-6 w-5 flex-none text-accent-brand-600" aria-hidden="true" />
-                {spec.quantity && <span className="-mr-2 text-gray-400">{spec.quantity}</span>}
-                <span>{spec.description}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="flex items-center gap-x-4">
+          <span className="flex-none text-sm font-semibold leading-6 text-gray-300">What&apos;s in the box</span>
+          <div className="h-px flex-auto bg-gray-600" />
         </div>
+        <ul
+          role="list"
+          className="mt-10 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:gap-6 md:grid-cols-2"
+        >
+          {vcuSpecs.map((spec) => (
+            <li key={spec.description} className="flex gap-x-3 text-gray-200">
+              <IconCheck className="h-6 w-5 flex-none text-accent-brand-600" aria-hidden="true" />
+              {spec.quantity && <span className="-mr-2 text-gray-400">{spec.quantity}</span>}
+              <span>{spec.description}</span>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* tailwind stock grid-like background */}

@@ -6,6 +6,7 @@ import Hero from './index/hero';
 import Products from './index/products';
 import { ScrollElements } from './routes';
 import Company from './index/company';
+import Contact from './index/contact';
 
 const height = `calc(100vh - ${navHeight}px)`;
 
@@ -27,6 +28,9 @@ export default function Home() {
         </ScrollElement>
         <ScrollElement style={sectionStyle} name={ScrollElements.company}>
           <Company />
+        </ScrollElement>
+        <ScrollElement style={sectionStyle} name={ScrollElements.contact}>
+          <Contact />
         </ScrollElement>
       </main>
     </>
