@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import ScreenTemp from '../assets/images/screenshot-temp.png';
+import RenderImage from '../assets/images/render.webp';
 import { ElementType } from 'react';
 import {
   IconCheck,
@@ -157,13 +157,8 @@ export default function Products() {
               </div>
             </div>
           </div>
-          <div className="-ml-12 -mt-12 p-12 shadow lg:sticky lg:top-10 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-            <Image
-              className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
-              src={ScreenTemp}
-              alt="Dynam Labs VCU"
-              unoptimized
-            />
+          <div className="-mt-12 p-0 sm:p-12 lg:sticky lg:top-10 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:-ml-12 lg:overflow-hidden">
+            <Image className="shadow-xl" src={RenderImage} alt="Dynam Labs VCU" unoptimized />
           </div>
           <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
             <div className="lg:pr-4">
@@ -200,7 +195,7 @@ export default function Products() {
         <h2 className="mt-2 text-2xl font-bold tracking-tight text-gray-100 sm:text-3xl">Full specs</h2>
         <div className="mt-6">
           <div className="mt-10 flex items-center gap-x-4">
-            <h4 className="flex-none text-sm font-semibold leading-6 text-gray-300">What’s included</h4>
+            <span className="flex-none text-sm font-semibold leading-6 text-gray-300">What&apos;s included</span>
             <div className="h-px flex-auto bg-gray-600" />
           </div>
           <ul
