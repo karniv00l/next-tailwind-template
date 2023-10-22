@@ -1,14 +1,13 @@
 'use client';
 
 import { Element as ScrollElement } from 'react-scroll';
-import Nav, { navHeight } from './nav';
+import Nav from './nav';
 import Hero from './index/hero';
 import Products from './index/products';
 import { ScrollElements } from './routes';
 import Company from './index/company';
 import Contact from './index/contact';
-
-export const sectionMinHeight = `calc(100vh - ${navHeight}px)`;
+import { sectionMinHeight } from './globals';
 
 const sectionStyle = {
   minHeight: sectionMinHeight,
