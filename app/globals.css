@@ -25,3 +25,9 @@ body {
   /* background-color: black; */
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
+
+@layer components {
+  /* .link {
+    @apply py-1 transition-all hover:border-b-2;
+  } */
+}

@@ -12,7 +12,6 @@ export const navHeight = 64;
 
 const logoHeight = 24;
 const scrollDuration = 500;
-const activeStyle = { textDecoration: 'underline' };
 
 export const NavScrollLink: FC<{ to: ScrollElements; className?: string; children: ReactNode }> = ({
   to,
@@ -20,7 +19,7 @@ export const NavScrollLink: FC<{ to: ScrollElements; className?: string; childre
   children,
 }) => (
   <ScrollLink
-    activeStyle={activeStyle}
+    activeClass="border-b-2"
     offset={-navHeight}
     to={to}
     href={`#${to}`}
@@ -36,7 +35,12 @@ export const NavScrollLink: FC<{ to: ScrollElements; className?: string; childre
 
 const NavScrollLiLink: FC<{ name: string; to: ScrollElements }> = ({ name, to }) => (
   <li className="mr-8 list-none uppercase">
-    <NavScrollLink to={to}>{name}</NavScrollLink>
+    <NavScrollLink
+      to={to}
+      className="py-1 transition-all hover:border-b-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-brand-600"
+    >
+      {name}
+    </NavScrollLink>
   </li>
 );
 
@@ -72,10 +76,11 @@ export default function Nav() {
         <NavScrollLiLink name="Home" to={ScrollElements.home} />
         <NavScrollLiLink name="Products" to={ScrollElements.products} />
         <NavScrollLiLink name="Company" to={ScrollElements.company} />
+        <NavScrollLiLink name="Contact" to={ScrollElements.contact} />
 
-        <li className="mr-8 list-none uppercase">
+        {/* <li className="mr-8 list-none uppercase">
           <Link href={Routes.contact}>Contact</Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

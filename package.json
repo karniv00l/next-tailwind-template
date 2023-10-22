@@ -10,6 +10,7 @@
     "lint:fix": "next lint --fix"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.18",
     "@types/react-scroll": "^1.8.9",
     "@types/three": "0.157.2",
     "next": "13.5.6",
