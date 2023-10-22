@@ -33,8 +33,8 @@ export const NavScrollLink: FC<{ to: ScrollElements; className?: string; childre
   </ScrollLink>
 );
 
-const NavScrollLiLink: FC<{ name: string; to: ScrollElements }> = ({ name, to }) => (
-  <li className="mr-8 list-none uppercase">
+const NavScrollLiLink: FC<{ name: string; to: ScrollElements; last?: boolean }> = ({ name, to, last }) => (
+  <li className={`list-none uppercase ${last ? 'mr-0' : 'mr-3 sm:mr-5'}`}>
     <NavScrollLink
       to={to}
       className="py-1 transition-all hover:border-b-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-brand-600"
@@ -54,7 +54,7 @@ export default function Nav() {
       style={{ height: navHeight }}
       className="w-100 sticky left-0 top-0 z-20 bg-black bg-opacity-30 pl-5 pr-5 font-mono font-bold backdrop-blur-lg backdrop-filter"
     >
-      <ul className="m-0 flex items-center justify-end p-5">
+      <ul className="m-0 flex items-center justify-end py-5 pr-0">
         <li className="mr-auto list-none uppercase">
           <Link href={Routes.index}>
             <Image
@@ -65,7 +65,7 @@ export default function Nav() {
               priority
             />
             <Image
-              className="md:hidden"
+              className="max-[400px]:hidden md:hidden"
               src={logoMobile as string}
               alt="Dynam Labs Logo Bolt"
               height={logoHeight}
@@ -76,11 +76,7 @@ export default function Nav() {
         <NavScrollLiLink name="Home" to={ScrollElements.home} />
         <NavScrollLiLink name="Products" to={ScrollElements.products} />
         <NavScrollLiLink name="Company" to={ScrollElements.company} />
-        <NavScrollLiLink name="Contact" to={ScrollElements.contact} />
-
-        {/* <li className="mr-8 list-none uppercase">
-          <Link href={Routes.contact}>Contact</Link>
-        </li> */}
+        <NavScrollLiLink name="Contact" to={ScrollElements.contact} last />
       </ul>
     </nav>
   );

@@ -51,7 +51,7 @@ export default function Company() {
           <div className="mx-auto max-w-4xl sm:mt-20 lg:max-w-5xl">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
               {features.map((feature) => (
-                <div key={feature.name} className="relative pl-16">
+                <div key={feature.name} className="relative pl-0 sm:pl-16">
                   <dt className="text-base font-bold leading-7 text-gray-100">{feature.name}</dt>
                   <dd className="mt-2 text-base leading-7 text-gray-300">{feature.description}</dd>
                 </div>
