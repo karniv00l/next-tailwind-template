@@ -1,3 +1,5 @@
+import { sectionMinHeight } from '../page';
+
 interface Feature {
   name: string;
   description: string;
@@ -27,7 +29,7 @@ const features: Feature[] = [
 
 export default function Company() {
   return (
-    <div className="relative h-full">
+    <div className="relative h-full" style={{ minHeight: sectionMinHeight }}>
       <div className="relative isolate overflow-hidden">
         <div className="mx-auto max-w-4xl px-8 py-10 lg:max-w-5xl lg:px-6">
           <div>
@@ -64,7 +66,7 @@ export default function Company() {
       {/* tailwind stock grid-like background */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <svg
-          className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-800 [mask-image:radial-gradient(80rem_80rem_at_bottom,white,transparent)]"
+          className="absolute left-[max(50%,25rem)] top-0 h-[85rem] w-[128rem] -translate-x-1/2 stroke-gray-800 [mask-image:radial-gradient(120rem_120rem_at_bottom,white,transparent)]"
           aria-hidden="true"
         >
           <defs>

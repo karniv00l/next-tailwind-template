@@ -3,10 +3,11 @@ import Image from 'next/image';
 import logoBolt from '../assets/images/bolt.svg';
 import { NavScrollLink } from '../nav';
 import { ScrollElements } from '../routes';
+import { sectionMinHeight } from '../page';
 
 export default function Hero() {
   return (
-    <div className="relative h-full">
+    <div className="relative h-full" style={{ minHeight: sectionMinHeight }}>
       {/* text */}
       <div className="absolute z-10 h-full w-full">
         <div className="flex h-full items-center justify-center">
@@ -62,9 +63,6 @@ export default function Hero() {
           <rect width="100%" height="100%" strokeWidth={0} fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" />
         </svg>
       </div>
-
-      {/* vanta background */}
-      {/* <div className="absolute z-0 h-full w-full">{enabled && <Vanta effectType={Effects.NET} />}</div> */}
     </div>
   );
 }

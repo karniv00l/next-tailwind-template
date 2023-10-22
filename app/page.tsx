@@ -8,10 +8,10 @@ import { ScrollElements } from './routes';
 import Company from './index/company';
 import Contact from './index/contact';
 
-const height = `calc(100vh - ${navHeight}px)`;
+export const sectionMinHeight = `calc(100vh - ${navHeight}px)`;
 
 const sectionStyle = {
-  minHeight: height,
+  minHeight: sectionMinHeight,
   width: '100%',
 };
 
@@ -20,7 +20,7 @@ export default function Home() {
     <>
       <Nav />
       <main className="flex flex-col items-center justify-between">
-        <ScrollElement style={{ height, width: '100%' }} name={ScrollElements.home}>
+        <ScrollElement style={sectionStyle} name={ScrollElements.home}>
           <Hero />
         </ScrollElement>
         <ScrollElement style={sectionStyle} name={ScrollElements.products}>
