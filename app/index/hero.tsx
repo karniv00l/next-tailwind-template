@@ -1,11 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import Image from 'next/image';
-// import Vanta, { Effects } from '../Vanta';
 import logoBolt from '../assets/images/bolt.svg';
 import { NavScrollLink } from '../nav';
 import { ScrollElements } from '../routes';
-
-// const enabled = false;
 
 export default function Hero() {
   return (
@@ -66,7 +63,7 @@ export default function Hero() {
         </svg>
       </div>
 
-      {/* vanta */}
+      {/* vanta background */}
       {/* <div className="absolute z-0 h-full w-full">{enabled && <Vanta effectType={Effects.NET} />}</div> */}
     </div>
   );

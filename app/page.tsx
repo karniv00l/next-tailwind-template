@@ -5,10 +5,12 @@ import Nav, { navHeight } from './nav';
 import Hero from './index/hero';
 import Products from './index/products';
 import { ScrollElements } from './routes';
-// import Company from './index/company';
+import Company from './index/company';
+
+const height = `calc(100vh - ${navHeight}px)`;
 
 const sectionStyle = {
-  height: `calc(100vh - ${navHeight}px)`,
+  minHeight: height,
   width: '100%',
 };
 
@@ -17,15 +19,15 @@ export default function Home() {
     <>
       <Nav />
       <main className="flex flex-col items-center justify-between">
-        <ScrollElement style={sectionStyle} name={ScrollElements.home}>
+        <ScrollElement style={{ height, width: '100%' }} name={ScrollElements.home}>
           <Hero />
         </ScrollElement>
         <ScrollElement style={sectionStyle} name={ScrollElements.products}>
           <Products />
         </ScrollElement>
-        {/* <ScrollElement style={sectionStyle} name={ScrollElements.company}>
+        <ScrollElement style={sectionStyle} name={ScrollElements.company}>
           <Company />
-        </ScrollElement> */}
+        </ScrollElement>
       </main>
     </>
   );
