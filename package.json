@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "@tabler/icons-react": "^2.39.0",
     "@types/react-scroll": "^1.8.9",
     "@types/three": "0.157.2",
     "next": "13.5.6",

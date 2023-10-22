@@ -11,5 +11,16 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": ["Dynam", "dynamlabs", "headlessui", "heroicons", "Nanum", "tailwindcss", "Vanta"]
+  "cSpell.words": [
+    "Dynam",
+    "dynamlabs",
+    "headlessui",
+    "heroicons",
+    "motorsport",
+    "Nanum",
+    "tabler",
+    "tailwindcss",
+    "unoptimized",
+    "Vanta"
+  ]
 }

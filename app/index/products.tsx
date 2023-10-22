@@ -1,4 +1,3 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid';
 import {
   ArrowPathIcon as ArrowPathIconOutlined,
   CloudArrowUpIcon as CloudArrowUpIconOutlined,
@@ -7,25 +6,17 @@ import {
 } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import ScreenTemp from '../assets/images/screenshot-temp.png';
-
-// const features = [
-//   {
-//     name: 'Push to deploy.',
-//     description:
-//       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-//     icon: CloudArrowUpIcon,
-//   },
-//   {
-//     name: 'SSL certificates.',
-//     description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-//     icon: LockClosedIcon,
-//   },
-//   {
-//     name: 'Database backups.',
-//     description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-//     icon: ServerIcon,
-//   },
-// ];
+import { ElementType } from 'react';
+import {
+  IconCheck,
+  IconCpu,
+  IconDeviceSdCard,
+  IconGps,
+  IconOutlet,
+  IconRecharging,
+  IconTemperature,
+  IconWifi,
+} from '@tabler/icons-react';
 
 const features2 = [
   {
@@ -54,6 +45,133 @@ const features2 = [
   },
 ];
 
+interface Feature {
+  name: string;
+  description: string;
+  icon: ElementType;
+}
+
+const vcuFeatures: Feature[] = [
+  {
+    name: 'Powerful Processing',
+    description:
+      'Experience high-performance control with a 520MHz CPU real-time operating system, ensuring real-time responsiveness for your electric vehicle applications',
+    icon: IconCpu as ElementType,
+  },
+  {
+    name: 'Comprehensive Connectivity',
+    description:
+      'Utilize 3x CAN, 2x SENT, and 1x Ethernet interfaces, ensuring seamless communication and integration with various vehicle components',
+    icon: IconWifi as ElementType,
+  },
+  {
+    name: 'Flexible Inputs and Outputs',
+    description:
+      'Benefit from a wide range of inputs and outputs, including 15x Digital Inputs, 4x Analog Inputs (0-5V), 2x Analog Outputs, and more, providing flexibility in customization',
+    icon: IconOutlet as ElementType,
+  },
+  {
+    name: 'Internal Logging',
+    description:
+      'Store extensive data with 128GB internal logging capacity, allowing in-depth analysis and performance optimization.',
+    icon: IconDeviceSdCard as ElementType,
+  },
+  {
+    name: 'Battery Management System',
+    description:
+      "With our expert BMS integration, you can rest assured that your vehicle's battery is efficiently managed, enhancing both its lifespan and overall reliability",
+    icon: IconRecharging as ElementType,
+  },
+  {
+    name: 'Temperature Monitoring',
+    description:
+      'Monitor temperature effectively with 4x Temperature Sensor Inputs, ensuring the components operate within the ideal temperature range for maximum efficiency and durability',
+    icon: IconTemperature as ElementType,
+  },
+  {
+    name: 'GPS Tracking',
+    description:
+      'Seamlessly integrate GPS technology into your electric vehicle applications, enabling precise location tracking and advanced navigation capabilities',
+    icon: IconGps as ElementType,
+  },
+];
+
+interface Spec {
+  quantity: string | null;
+  description: string;
+}
+
+const vcuSpecs: Spec[] = [
+  {
+    quantity: '520MHz',
+    description: 'CPU real-time operating system',
+  },
+  {
+    quantity: '128GB',
+    description: 'Internal logging',
+  },
+  {
+    quantity: '3x',
+    description: 'CAN',
+  },
+  {
+    quantity: '2x',
+    description: 'SENT',
+  },
+  {
+    quantity: '1x',
+    description: 'Ethernet',
+  },
+  {
+    quantity: null,
+    description: 'GPS',
+  },
+  {
+    quantity: null,
+    description: 'BMS master',
+  },
+  {
+    quantity: '10x',
+    description: 'PWM/PFM (12V)',
+  },
+  {
+    quantity: '15x',
+    description: 'Digital Input',
+  },
+  {
+    quantity: '2x',
+    description: '5V ref supply',
+  },
+  {
+    quantity: '1x',
+    description: '12V ref supply',
+  },
+  {
+    quantity: '4x',
+    description: 'Temperature Sensor Input',
+  },
+  {
+    quantity: '4x',
+    description: 'Analog Input (0-5V)',
+  },
+  {
+    quantity: '4x',
+    description: 'Analog Input (0-12V)',
+  },
+  {
+    quantity: '2x',
+    description: 'Analog Output',
+  },
+  {
+    quantity: '8x',
+    description: 'HS output (1.5A each)',
+  },
+  {
+    quantity: '12x',
+    description: 'LS output (1.5A each)',
+  },
+];
+
 export default function Products() {
   return (
     <div className="relative h-full">
@@ -63,16 +181,16 @@ export default function Products() {
           <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
             <div className="lg:pr-4">
               <div className="lg:max-w-lg">
-                <p className="text-base font-semibold leading-7 text-gray-400">Deploy faster</p>
-                <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">A better workflow</h1>
-                <p className="mt-6 text-xl leading-8 text-gray-300">
-                  Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam
-                  eget aliquam. Quisque id at vitae feugiat egestas.
+                <p className="text-base font-semibold leading-7 text-gray-400">All in one EV solution</p>
+                <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Vehicle Control Unit</h1>
+                <p className="mt-6 text-xl leading-8 text-gray-200">
+                  The <strong>Dynam Labs VCU</strong> is an all-in-one EV solution designed to meet the demands of
+                  high-performance EV street and motorsport applications.
                 </p>
               </div>
             </div>
           </div>
-          <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-10 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+          <div className="-ml-12 -mt-12 p-12 shadow lg:sticky lg:top-10 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
             <Image
               className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
               src={ScreenTemp}
@@ -82,53 +200,55 @@ export default function Products() {
           </div>
           <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
             <div className="lg:pr-4">
-              <div className="max-w-xl text-base leading-7 text-gray-300 lg:max-w-lg">
+              <div className="max-w-xl text-base leading-7 text-gray-200 lg:max-w-lg">
+                {/* summary */}
                 <p>
-                  Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet
-                  vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque
-                  erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris
-                  semper sed amet vitae sed turpis id.
+                  It&apos;s a tailored solution created for enthusiasts and professionals seeking optimal performance
+                  from their electric vehicles.
                 </p>
+                <p>
+                  The <strong>VCU</strong> can manage and optimize a wide range of functions, including motor
+                  performance, battery management, regenerative braking, thermal management, and much more.
+                </p>
+
+                {/* feature list */}
                 <ul role="list" className="mt-8 space-y-8 text-gray-100">
-                  <li className="flex gap-x-3">
-                    <CloudArrowUpIcon className="mt-1 h-5 w-5 flex-none text-accent-brand-600" aria-hidden="true" />
-                    <span>
-                      <strong className="font-semibold text-gray-200">Push to deploy.</strong> Lorem ipsum, dolor sit
-                      amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor
-                      cupiditate blanditiis ratione.
-                    </span>
-                  </li>
-                  <li className="flex gap-x-3">
-                    <LockClosedIcon className="mt-1 h-5 w-5 flex-none text-accent-brand-600" aria-hidden="true" />
-                    <span>
-                      <strong className="font-semibold text-gray-200">SSL certificates.</strong> Anim aute id magna
-                      aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
-                    </span>
-                  </li>
-                  <li className="flex gap-x-3">
-                    <ServerIcon className="mt-1 h-5 w-5 flex-none text-accent-brand-600" aria-hidden="true" />
-                    <span>
-                      <strong className="font-semibold text-gray-200">Database backups.</strong> Ac tincidunt sapien
-                      vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
-                    </span>
-                  </li>
+                  {vcuFeatures.map((feature) => (
+                    <li key={feature.name} className="flex gap-x-3">
+                      <feature.icon className="mt-1 h-5 w-5 flex-none text-accent-brand-600" aria-hidden="true" />
+                      <span>
+                        <strong className="font-semibold text-gray-100">{feature.name}.</strong> {feature.description}.
+                      </span>
+                    </li>
+                  ))}
                 </ul>
-                <p className="mt-8">
-                  Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie
-                  auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices
-                  hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
-                </p>
-                <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-200">No server? No problem.</h2>
-                <p className="mt-6">
-                  Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna
-                  nibh. Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id
-                  sed tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam
-                  sed diam turpis ipsum eu a sed convallis diam.
-                </p>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* full specs */}
+      <div className="mx-auto max-w-3xl px-8 text-center lg:max-w-4xl lg:px-6">
+        <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl">Full specs</h2>
+        <p className="mt-6">
+          <div className="mt-10 flex items-center gap-x-4">
+            <h4 className="flex-none text-sm font-semibold leading-6 text-gray-300">What’s included</h4>
+            <div className="h-px flex-auto bg-gray-600" />
+          </div>
+          <ul
+            role="list"
+            className="mt-10 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:gap-6 md:grid-cols-2"
+          >
+            {vcuSpecs.map((spec) => (
+              <li key={spec.description} className="flex gap-x-3 text-gray-200">
+                <IconCheck className="h-6 w-5 flex-none text-accent-brand-600" aria-hidden="true" />
+                {spec.quantity && <span className="-mr-2 text-gray-400">{spec.quantity}</span>}
+                <span>{spec.description}</span>
+              </li>
+            ))}
+          </ul>
+        </p>
       </div>
 
       {/* stats */}
