@@ -7,6 +7,7 @@ const inter = Inter({
   display: 'block',
   variable: '--font-inter',
 });
+
 const gothicCoding = Nanum_Gothic_Coding({
   weight: ['400', '700'],
   subsets: ['latin'],

@@ -2,6 +2,8 @@ import { sectionMinHeight } from '../globals';
 import { GridBgBottom } from './grid-bg';
 
 export default function Contact() {
+  const formURL = process.env.NEXT_PUBLIC_CONTACT_FORM_POST_URL ?? '#';
+
   return (
     <div className="relative h-full" style={{ minHeight: sectionMinHeight }}>
       <div className="relative isolate px-6 py-24 sm:py-32 lg:px-8">
@@ -10,7 +12,14 @@ export default function Contact() {
           <p className="mt-2 text-lg leading-8 text-gray-300">Have questions or inquiries? We&apos;re here to help!</p>
         </div>
 
-        <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+        <form
+          action={formURL}
+          encType="multipart/form-data"
+          acceptCharset="UTF-8"
+          method="POST"
+          className="mx-auto mt-16 max-w-xl sm:mt-20"
+        >
+          <input type="hidden" name="utf8" value="✓"></input>
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div className="sm:col-span-2">
               <label htmlFor="name" className="block text-sm font-semibold leading-6 text-gray-100">
