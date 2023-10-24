@@ -35,6 +35,12 @@ Open [http://localhost:3666](http://localhost:3666) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+## Setting up VSCode
+
+List of recommended extensions is stored in [.vscode/extensions.json](./.vscode/extensions.json). VSCode will prompt you to install them when you open the project for the first time.
+
+Settings are stored in [.vscode/settings.json](./.vscode/settings.json). This will enable automatic formatting on save and automatic linting.
+
 ## Deployments
 
 This site is automatically deployed to [https://dynamlabs.com](https://dynamlabs.com) on every push to `main` branch using Cloudflare Pages.
