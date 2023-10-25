@@ -2,17 +2,17 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter, Source_Code_Pro } from 'next/font/google';
 
-const inter = Inter({
+const fontSans = Inter({
   subsets: ['latin'],
   display: 'block',
-  variable: '--font-inter',
+  variable: '--font-sans',
 });
 
-const sourceCodePro = Source_Code_Pro({
+const fontMono = Source_Code_Pro({
   weight: ['400', '700'],
   subsets: ['latin'],
   display: 'block',
-  variable: '--font-source-code-pro',
+  variable: '--font-mono',
 });
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
       </head>
-      <body className={[inter, sourceCodePro].map((font) => font.variable).join(' ')}>
+      <body className={[fontSans, fontMono].map((font) => font.variable).join(' ')}>
         <div className="ml-auto mr-auto max-w-7xl overflow-x-clip font-sans">{children}</div>
       </body>
     </html>
