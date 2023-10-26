@@ -14,6 +14,8 @@ module.exports = {
     tsconfigRootDir: __dirname,
   },
   rules: {
-    "prettier/prettier": "error"
+    "prettier/prettier": ["error", {
+      "endOfLine": "auto"
+    }],
   },
 };
